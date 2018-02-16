@@ -1,6 +1,7 @@
 
 // Config file for running Rollup in "normal" mode (non-watch)
 
+import nodeResolve from 'rollup-plugin-node-resolve'
 import rollupGitVersion from 'rollup-plugin-git-version'
 import json from 'rollup-plugin-json'
 
@@ -34,6 +35,7 @@ export default {
 	entry: 'src/index.js',
 	dest: 'dist/leaflet.markercluster-src.js',
 	plugins: [
+		nodeResolve(),
 		release ? json() : rollupGitVersion(),
 	],
 	sourceMap: true,

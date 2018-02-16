@@ -1,8 +1,5 @@
+export { MarkerClusterGroup, markerClusterGroup } from './MarkerClusterGroup';
+export { MarkerCluster } from './MarkerCluster';
 
-export { MarkerClusterGroup } from './MarkerClusterGroup.js';
-export { MarkerCluster } from './MarkerCluster.js';
-import {} from './MarkerOpacity.js';
-import {} from './DistanceGrid.js';
-import {} from './MarkerCluster.QuickHull.js';
-import {} from './MarkerCluster.Spiderfier.js';
-import {} from './MarkerClusterGroup.Refresh.js';
+import './MarkerClusterGroup.Refresh';
+import './MarkerOpacity';

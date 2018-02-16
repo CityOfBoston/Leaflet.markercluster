@@ -1,14 +1,15 @@
 
 /*
-* Extends L.Marker to include two extra methods: clusterHide and clusterShow.
+* Extends Marker to include two extra methods: clusterHide and clusterShow.
 * 
 * They work as setOpacity(0) and setOpacity(1) respectively, but
 * they will remember the marker's opacity when hiding and showing it again.
 * 
 */
 
+import { Marker } from 'leaflet';
 
-L.Marker.include({
+Marker.include({
 	
 	clusterHide: function () {
 		this.options.opacityWhenUnclustered = this.options.opacity || 1;
@@ -22,5 +23,3 @@ L.Marker.include({
 	}
 	
 });
-
-
